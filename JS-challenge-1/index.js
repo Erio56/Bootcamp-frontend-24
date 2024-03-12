@@ -3,13 +3,13 @@ class Cinema {
    seats;
 
    status() {
-      
+
    }
    
    constructor(rows, seats){
 
       this.rows = [];
-      for(let i = 0; i < rows: i++){
+      for(let i = 0; i < rows; i++){
          //TODO
       }
    }
@@ -18,7 +18,6 @@ class Cinema {
 class Seat {
    rowNum;
    rowSeat;
-   status;
 
    constructor(rowNum, rowSeat, status){
       this.rowNum;
