@@ -1,0 +1,44 @@
+.card{
+   display: flex;
+   height: 600px;
+   width: 500px;
+   background-color: #161757;
+   border: #64ffca;
+   border-style: solid;
+   border-color: #64ffca;
+   border-width: 5px;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   row-gap: 20px;
+   column-gap: 30px;
+}
+
+.box_border_1{
+   border-style: solid;
+   border-color: #64ffca;
+   border-width: 2px;
+}
+.box_border_2{
+   border-style: solid;
+   border-color: #c52574;
+   border-width: 2px;
+}
+
+.first_div{
+   display: flex;
+   max-height: 25px;
+   min-width: 450px;
+   flex-grow: 1;
+   row-gap: 10px;
+   column-gap: 30px;
+}
+
+.second_div{
+   display: flex;
+   max-height: 25px;
+   min-width: 420px;
+   flex-grow: 1;
+   row-gap: 10px;
+   column-gap: 30px;
+}
