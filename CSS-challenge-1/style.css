@@ -17,17 +17,17 @@
 .box_border_1{
    border-style: solid;
    border-color: #64ffca;
-   border-width: 2px;
+   border-width: 4px;
 }
 .box_border_2{
    border-style: solid;
    border-color: #c52574;
-   border-width: 2px;
+   border-width: 3px;
 }
 
 .first_div{
    display: flex;
-   max-height: 25px;
+   max-height: 50px;
    min-width: 450px;
    flex-grow: 1;
    row-gap: 10px;
@@ -41,4 +41,37 @@
    flex-grow: 1;
    row-gap: 10px;
    column-gap: 30px;
+}
+
+.third_div{
+   display: flex;
+   max-height: 25px;
+   min-width: 420px;
+   min-height: 260px;
+}
+
+.fourth_div{
+   display: flex;
+   max-height: 25px;
+   min-width: 420px;
+   min-height: 260px;
+}
+
+.fifth_div{
+   display: flex;
+   max-height: 25px;
+   min-width: 420px;
+   min-height: 145px;
+   flex-direction: column;
+   gap: 10px 10px;
+   justify-content: center;
+   padding: 10px;
+}
+
+.sixth_div{
+   display: flex;
+   max-height: 25px;
+   min-width: 420px;
+   min-height: 90px;
+   flex-direction: column;
 }
