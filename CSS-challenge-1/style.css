@@ -1,6 +1,6 @@
 .card{
    display: flex;
-   height: 600px;
+   height: 700px;
    width: 500px;
    background-color: #161757;
    border: #64ffca;
@@ -32,6 +32,8 @@
    flex-grow: 1;
    row-gap: 10px;
    column-gap: 30px;
+   color: white;
+   font-size: 50px;
 }
 
 .second_div{
@@ -41,13 +43,15 @@
    flex-grow: 1;
    row-gap: 10px;
    column-gap: 30px;
+   color: white;
+   font-size: 25px;
+   text-align: right;
 }
 
 .third_div{
    display: flex;
-   max-height: 25px;
-   min-width: 420px;
    min-height: 260px;
+   justify-content: center;
 }
 
 .fourth_div{
@@ -74,4 +78,10 @@
    min-width: 420px;
    min-height: 90px;
    flex-direction: column;
+   color: white;
+}
+
+.card_image{
+   display: flex;
+   max-width: 450px;
 }
