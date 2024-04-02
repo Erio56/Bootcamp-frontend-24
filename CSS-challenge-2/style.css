@@ -1,0 +1,113 @@
+.container {  display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+   gap: 70px 0px;
+   grid-auto-flow: row;
+   grid-template-areas:
+     ". tool1 cards1 cards1 cards1 cards1 tool2 ."
+     ". tool1 cards1 cards1 cards1 cards1 tool2 ."
+     "tool5 tool1 cards1 cards1 cards1 cards1 tool2 ."
+     ". tool3 cards2 cards2 cards2 cards2 tool4 tool6"
+     ". tool3 cards2 cards2 cards2 cards2 tool4 ."
+     ". tool3 cards2 cards2 cards2 cards2 tool4 ."
+     ". . . . . . . .";
+ }
+ 
+ .cards2 {  display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+   grid-template-rows: 1fr 1fr;
+   gap: 0px 0px;
+   grid-auto-flow: row;
+   grid-template-areas:
+     ". . . . ."
+     ". . . . .";
+   grid-area: cards2;
+ }
+ 
+ .cards1 {  display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+   grid-template-rows: 1fr 1fr;
+   gap: 0px 0px;
+   grid-auto-flow: row;
+   grid-template-areas:
+     ". . . . ."
+     ". . . . .";
+   grid-area: cards1;
+ }
+ 
+ .tool1 {  display: grid;
+   grid-template-columns: 1fr;
+   grid-template-rows: 1fr 1fr 1fr;
+   gap: 0px 0px;
+   grid-auto-flow: row;
+   grid-template-areas:
+     "."
+     "."
+     ".";
+   grid-area: tool1;
+ }
+ 
+ .tool2 {  display: grid;
+   grid-template-columns: 1fr;
+   grid-template-rows: 1fr 1fr 1fr;
+   gap: 0px 0px;
+   grid-auto-flow: row;
+   grid-template-areas:
+     "."
+     "."
+     ".";
+   grid-area: tool2;
+ }
+ 
+ .tool3 {  display: grid;
+   grid-template-columns: 1fr;
+   grid-template-rows: 1fr 1fr 1fr;
+   gap: 0px 0px;
+   grid-auto-flow: row;
+   grid-template-areas:
+     "."
+     "."
+     ".";
+   grid-area: tool3;
+ }
+ 
+ .tool4 {  display: grid;
+   grid-template-columns: 1fr;
+   grid-template-rows: 1fr 1fr 1fr;
+   gap: 0px 0px;
+   grid-auto-flow: row;
+   grid-template-areas:
+     "."
+     "."
+     ".";
+   grid-area: tool4;
+ }
+ 
+ .tool5 {  display: grid;
+   grid-template-columns: 1fr;
+   grid-template-rows: 1fr;
+   grid-auto-columns: 1fr;
+   gap: 0px 0px;
+   grid-auto-flow: row;
+   grid-template-areas:
+     ".";
+   grid-area: tool5;
+ }
+ 
+ .tool6 {  display: grid;
+   grid-template-columns: 1fr;
+   grid-template-rows: 1fr;
+   gap: 0px 0px;
+   grid-auto-flow: row;
+   grid-template-areas:
+     ".";
+   grid-area: tool6;
+ }
+ 
+.card{
+   background-color: blueviolet;
+   border: solid;
+   border-color: chocolate;
+   border-radius: 2px;
+}
+
