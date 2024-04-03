@@ -1,10 +1,9 @@
 .container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   gap: 10px;
-  width: auto;
-  height: 1500px;
+  min-width: 500px;
+  min-height: 600px;
+  height: auto;
   grid-auto-flow: row;
   grid-template-areas:
     ". tool1 cards1 cards1 cards1 cards1 tool2 ."
@@ -13,7 +12,6 @@
     ". tool3 cards2 cards2 cards2 cards2 tool4 tool6"
     ". tool3 cards2 cards2 cards2 cards2 tool4 ."
     ". tool3 cards2 cards2 cards2 cards2 tool4 ."
-    ". . . . . . . .";
 }
 
 .cards2 {
@@ -22,9 +20,6 @@
   grid-template-rows: 1fr 1fr;
   gap: 0px 0px;
   grid-auto-flow: row;
-  grid-template-areas:
-    ". . . . ."
-    ". . . . .";
   grid-area: cards2;
 }
 
@@ -34,9 +29,6 @@
   grid-template-rows: 1fr 1fr;
   gap: 0px 0px;
   grid-auto-flow: row;
-  grid-template-areas:
-    ". . . . ."
-    ". . . . .";
   grid-area: cards1;
 }
 
@@ -46,10 +38,6 @@
   grid-template-rows: 1fr 1fr 1fr;
   gap: 0px 0px;
   grid-auto-flow: row;
-  grid-template-areas:
-    "."
-    "."
-    ".";
   grid-area: tool1;
 }
 
@@ -59,10 +47,6 @@
   grid-template-rows: 1fr 1fr 1fr;
   gap: 0px 0px;
   grid-auto-flow: row;
-  grid-template-areas:
-    "."
-    "."
-    ".";
   grid-area: tool2;
 }
 
@@ -72,10 +56,6 @@
   grid-template-rows: 1fr 1fr 1fr;
   gap: 0px 0px;
   grid-auto-flow: row;
-  grid-template-areas:
-    "."
-    "."
-    ".";
   grid-area: tool3;
 }
 
@@ -85,10 +65,6 @@
   grid-template-rows: 1fr 1fr 1fr;
   gap: 0px 0px;
   grid-auto-flow: row;
-  grid-template-areas:
-    "."
-    "."
-    ".";
   grid-area: tool4;
 }
 
@@ -99,7 +75,6 @@
   grid-auto-columns: 1fr;
   gap: 0px 0px;
   grid-auto-flow: row;
-  grid-template-areas: ".";
   grid-area: tool5;
 }
 
@@ -109,7 +84,6 @@
   grid-template-rows: 1fr;
   gap: 0px 0px;
   grid-auto-flow: row;
-  grid-template-areas: ".";
   grid-area: tool6;
 }
 
