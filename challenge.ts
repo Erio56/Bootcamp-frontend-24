@@ -2,13 +2,13 @@ let PI: number;
 let age: number;
 let PersonName: string;
 let maybe: number | string;
-let rol: string;
+let rol: 'Admin' | 'User';
 
 rol = 'User';
 maybe = 25;
 PI = Math.PI;
 PersonName = 'Alexander';
-age = 24
+age = 24;
 maybe = 'something else';
 rol = 'Admin';
 
@@ -65,7 +65,8 @@ const pikachu: Pikachu = {
     height:4,
     weight: 60,
     base_experience: 112, // this can be optional value
-    types: [  {
+    types: [  
+            {
                 slot: 1,
                 name:"electric",
                 url:"https://pokeapi.co/api/v2/type/13/"
