@@ -1,0 +1,14 @@
+{
+  "name": "bootcamp-frontend-24",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "preinstall": "if echo \"$npm_config_user_agent\" | grep -q \"yarn\"; then echo 'Yarn is not allowed. Please use npm.' && exit 1; fi"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^18.2.0"
+  }
+}
