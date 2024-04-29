@@ -1,0 +1,13 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.my_button {
+  background-color: blueviolet;
+}
+.my_button:hover {
+  background-color: rgb(111, 63, 155);
+}
