@@ -10,6 +10,7 @@ const MyButton = () => {
 
   return (
     <>
+      <p>clicked {clicked} times !</p>
       <button onClick={handleClick}>Click me!</button>
     </>
   );
