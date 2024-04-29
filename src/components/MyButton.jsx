@@ -4,7 +4,9 @@ const MyButton = () => {
   const [clicked, setClicked] = useState(0)
 
   const handleClick = () => {
-    setClicked(clicked + 1);
+    setClicked(clicked => clicked + 1);
+    setClicked(clicked => clicked + 1);
+    setClicked(clicked => clicked + 1);
   }
 
 
