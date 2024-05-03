@@ -1,19 +1,25 @@
-# What is npm uninstall
-Its a NPM command to remove a package from the project's dependencies 
 
-this command completly removes a package from the `node_modules` directory. It also removes the package from the dependencies, devDependencies, optionalDependencies, and peerDependencies objects in your `package.json`.
+## Modes
 
-if there is a `npm-shrinkwrap.json` or `package-lock.json` present, it will update these files too.
+Webpack offers three main modes:
 
-## Unscoped package
-`npm uninstall <package_name>`
-## Scoped package
-`npm uninstall <@scope/package_name>`
+### Development Mode
 
-## Removing a local package without removing it from package.json
-To remove a package without updating any dependency file use `--no-save` alongside with npm uninstall. For example:
-`npm uninstall --no-save react`
+The `development` mode is tailored for the development phase of a project. It focuses on providing features that enhance the development experience, such as:
 
-## Removing a global package
-To remove a global package use `-g` alongside npm uninstall. For example:
-`npm uninstall -g react`
+- **Source Maps**: Webpack generates source maps that map the bundled code back to its original source files. This facilitates easier debugging, as developers can pinpoint errors or log messages directly in their original source code.
+- **Readable Output Code**: The output code is typically more human-readable and easier to understand, aiding developers in debugging and troubleshooting.
+- **Faster Build Times**: In `development` mode, webpack might skip some optimizations or perform less aggressive optimization steps to speed up the build process. This enables faster iteration during development.
+
+### Production Mode
+
+The `production` mode is optimized for deployment in a live environment. It focuses on creating a smaller, more optimized bundle for faster load times on the live site. Key features of `production` mode include:
+
+- **Minification**: Webpack applies minification techniques to reduce the size of the output bundle by removing unnecessary whitespace, comments, and renaming variables to shorter names.
+- **Tree Shaking**: Unused code (dead code) is eliminated from the bundle, resulting in a smaller bundle size.
+- **Code Splitting**: Webpack splits the bundle into smaller chunks, allowing for better caching and faster initial load times for users.
+
+### None Mode
+
+The `none` mode disables all built-in optimizations and defaults. It provides developers with full control over webpack's behavior without any predefined optimizations. This mode is useful when developers want to customize webpack's configuration extensively or when they have specific optimization requirements.
+
