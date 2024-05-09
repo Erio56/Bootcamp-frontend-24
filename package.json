@@ -1,26 +1,26 @@
 {
-  "name": "bootcamp-frontend-24",
-  "version": "1.0.0",
-  "description": "css-challenge-3",
-  "repository": "git@github.com:M-oliveda/Bootcamp-frontend-24.git",
-  "author": "Mauricio Oliveda <maurioliveda@gmail.com>",
-  "license": "MIT",
+  "name": "todolist",
   "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "postcss:watch": "postcss src/style.css --use postcss-import stylelint --dir public --watch",
-    "postcss:build": "postcss src/style.css --use postcss-import stylelint cssnano --dir public"
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "cssnano": "^7.0.1",
-    "postcss": "^8.4.38",
-    "postcss-cli": "^11.0.0",
-    "postcss-import": "^16.1.0",
-    "stylelint": "^16.5.0"
-  },
-  "stylelint": {
-    "rules": {
-      "color-no-invalid-hex": true,
-      "block-no-empty": true
-    }
+    "@types/react": "^18.2.66",
+    "@types/react-dom": "^18.2.22",
+    "@vitejs/plugin-react": "^4.2.1",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react": "^7.34.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.6",
+    "vite": "^5.2.0"
   }
 }

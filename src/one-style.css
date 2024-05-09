@@ -1,9 +1,0 @@
-.block {
-  display: flex;
-  flex-flow: row wrap;
-  background-color: #ccc;
-}
-
-.my-element {
-  font-size: 1em;
-}
