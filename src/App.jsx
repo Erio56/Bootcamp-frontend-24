@@ -8,27 +8,27 @@ export default function TaskApp() {
   function handleAddTask(text) {
     dispatch(
       {
+        type: 'added',
         id: nextId++,
         text: text,
-        done: false,
       },
     );
   }
 
   function handleChangeTask(task) {
-    dispatch(
-      tasks.map((t) => {
-        if (t.id === task.id) {
-          return task;
-        } else {
-          return t;
-        }
+    dispatch({
+        type: 'added',
+        id: nextId++,
+        text: text,
       })
     );
   }
 
   function handleDeleteTask(taskId) {
-    dispatch(tasks.filter((t) => t.id !== taskId));
+    dispatch({
+      type: 'deleted',
+      id: taskId,
+    });
   }
 
   return (
