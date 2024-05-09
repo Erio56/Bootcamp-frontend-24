@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import dispatch, { useState } from 'react';
 import AddTask from './AddTask.jsx';
 import TaskList from './TaskList.jsx';
 
@@ -6,18 +6,17 @@ export default function TaskApp() {
   const [tasks, setTasks] = useState(initialTasks);
 
   function handleAddTask(text) {
-    setTasks([
-      ...tasks,
+    dispatch(
       {
         id: nextId++,
         text: text,
         done: false,
       },
-    ]);
+    );
   }
 
   function handleChangeTask(task) {
-    setTasks(
+    dispatch(
       tasks.map((t) => {
         if (t.id === task.id) {
           return task;
@@ -29,7 +28,7 @@ export default function TaskApp() {
   }
 
   function handleDeleteTask(taskId) {
-    setTasks(tasks.filter((t) => t.id !== taskId));
+    dispatch(tasks.filter((t) => t.id !== taskId));
   }
 
   return (
