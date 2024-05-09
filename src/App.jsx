@@ -43,7 +43,7 @@ export default function TaskApp() {
     dispatch({
         type: 'added',
         id: nextId++,
-        text: text,
+        text: task,
       });
   }
 
