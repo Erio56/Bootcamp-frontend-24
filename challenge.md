@@ -23,3 +23,4 @@ The `production` mode is optimized for deployment in a live environment. It focu
 
 The `none` mode disables all built-in optimizations and defaults. It provides developers with full control over webpack's behavior without any predefined optimizations. This mode is useful when developers want to customize webpack's configuration extensively or when they have specific optimization requirements.
 
+
