@@ -14,7 +14,7 @@
 
 
 import MainSection from "./MainSection";
-import { languageContext } from "./LanguagesContext";
+import languageContext from "./LanguagesContext";
 
 // const languages = ['JavaScript', 'Python'];
 

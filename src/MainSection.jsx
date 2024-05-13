@@ -1,8 +1,9 @@
 import { useContext } from "react"
+import languageContext from "./LanguagesContext"
 
 export default function MainSection() {
 
-   const languages = useContext()
+   const languages = useContext(languageContext)
 
    return (
      <div>
