@@ -14,18 +14,14 @@
 
 
 import MainSection from "./MainSection";
-import languageContext from "./LanguagesContext";
-
-// const languages = ['JavaScript', 'Python'];
-
-
+import LanguagesContextProvider from "./LanguagesContext";
 
 export default function App() {
  return (
    <>
-    <languageContext.Provider value={['JavaScript', 'Python']}>\
+    <LanguagesContextProvider>
       <MainSection />
-    </languageContext.Provider>
+    </LanguagesContextProvider>
    </>
  );
 }

@@ -1,5 +1,29 @@
-import { createContext } from "react";
+/* eslint-disable react/prop-types */
+import React, { useState } from 'react'
 
-const languageContext = createContext('');
+export const LanguagesContext = React.createContext({
+  languages: [],
+  setLanguages: () => {}
+})
 
-export default languageContext;
+const LanguagesContextProvider = (props) => {
+
+  const setLanguages = (languages) => {
+    setState({...state, languages: languages})
+  }
+
+  const initState = {
+    languages: ['JavaScript', 'Python'],
+    setLanguages: setLanguages
+  } 
+
+  const [state, setState] = useState(initState)
+
+  return (
+    <LanguagesContext.Provider value={state}>
+      {props.children}
+    </LanguagesContext.Provider>
+  )
+}
+
+export default LanguagesContextProvider;

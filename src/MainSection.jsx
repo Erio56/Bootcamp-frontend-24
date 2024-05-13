@@ -1,14 +1,21 @@
 import { useContext } from "react"
-import languageContext from "./LanguagesContext"
+import { LanguagesContext } from "./LanguagesContext";
 
 export default function MainSection() {
 
-   const languages = useContext(languageContext)
+   const languagesContext = useContext(LanguagesContext);
+
+   const handleClick = () => {
+      const revesedArray = languagesContext.languages.reverse();
+      console.log(languagesContext);   
+      languagesContext.setLanguages(revesedArray);
+   }
 
    return (
      <div>
-       <p id="favoriteLanguage">favorite programing language: {languages[0]}</p>
-       <button id="changeFavorite">toggle language</button>
+      <p>{languagesContext.languages[0]}</p>
+       <p id="favoriteLanguage">favorite programing language: {languagesContext.languages[0]}</p>
+       <button id="changeFavorite" onClick={handleClick}>toggle language</button>
      </div>
    )
 }
