@@ -1,30 +1,21 @@
-# React + TypeScript + Vite
+# General objectives:
+  - [✅]  Crear una nueva aplicación con React, Vite, TypeScript.
+  - Usar POKE API.
+  - Usa Cache donde sea posible. Pokéapi nos limita a 100 request por hora, así que no
+    repitan sus queries.
+  - Usa Atomic Design
+  - [✅] Para los estilos utiliza un preprocesador a tu selección
+  - [✅] Trata de que cada commit sea un paso importante del desafío.
+  
+# Objective history
+  - Project Created
+  - Installed SASS
+  - Created Readme
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# How to run
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+  - Clone the repo.
+  - run `npm install` to install all dependencies.
+  - run `npm run dev` to run the dev server. 
