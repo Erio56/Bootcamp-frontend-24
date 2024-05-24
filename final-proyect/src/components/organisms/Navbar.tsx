@@ -1,9 +1,11 @@
+import NavbarLogo from "../atoms/NavbarLogo";
 import NavbarElements from "../molecules/NavbarElements";
 
 const Navbar = () => {
    
    return (
-      <div>
+      <div className="navbar">
+         <NavbarLogo/>
          <NavbarElements/>
       </div>
    )

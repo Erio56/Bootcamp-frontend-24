@@ -1,12 +1,10 @@
-import NavbarItem from "../atoms/NavbarItem"
-import NavbarLogo from "../atoms/NavbarLogo";
+import NavbarItem from "../atoms/NavbarItem";
 
 const NavbarElements = () => {
 
    return (
       
-      <menu>
-         <NavbarLogo/>
+      <menu className="navbar_items">
          <NavbarItem label={"Game"}/>
          <NavbarItem label={"Langs"}/>
          <NavbarItem label={"Pokédex"}/>

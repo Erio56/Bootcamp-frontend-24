@@ -7,3 +7,19 @@
   background-color: aqua;
 }
 
+.navbar_items {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4rem;
+  justify-content: flex-end;
+  flex-grow: 1;
+  margin-right: 3rem;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-grow: 1;
+}
