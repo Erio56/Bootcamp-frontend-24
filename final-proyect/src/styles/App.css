@@ -27,4 +27,13 @@
   align-items: center;
   flex-grow: 1;
   background-color: #cc0000;
+  height: 6rem;
+}
+
+.navbar_logo{
+  padding-left: 3rem;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: center;
 }
