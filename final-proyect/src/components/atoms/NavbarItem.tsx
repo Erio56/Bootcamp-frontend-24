@@ -2,7 +2,7 @@ interface NavbarItemProps {
    label: string
 }
 
-const NavbarItem: React.FC<NavbarItemProps> = ( { label }:NavbarItemProps ) => {
+const NavbarItem = ( { label }:NavbarItemProps ) => {
 
    return (
       <li>{label}</li>
