@@ -2,7 +2,11 @@
 const Navbar = () => {
    
    return (
-      <p>prueba</p>
+      <div>
+         <menu>
+            <li></li>
+         </menu>
+      </div>
    )
 
 }
