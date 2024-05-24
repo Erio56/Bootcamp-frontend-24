@@ -12,7 +12,9 @@
   - Installed SASS
   - Created Readme
 
+# Dependencies 
 
+  - SASS
 
 # How to run
 
