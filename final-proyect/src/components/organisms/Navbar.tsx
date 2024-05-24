@@ -1,11 +1,10 @@
+import NavbarElements from "../molecules/NavbarElements";
 
 const Navbar = () => {
    
    return (
       <div>
-         <menu>
-            <li></li>
-         </menu>
+         <NavbarElements/>
       </div>
    )
 
