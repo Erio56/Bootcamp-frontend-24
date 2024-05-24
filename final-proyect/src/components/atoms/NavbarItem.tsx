@@ -5,7 +5,7 @@ interface NavbarItemProps {
 const NavbarItem = ( { label }:NavbarItemProps ) => {
 
    return (
-      <li>{label}</li>
+      <li className="navbar_item">{label}</li>
    )
 }
 
