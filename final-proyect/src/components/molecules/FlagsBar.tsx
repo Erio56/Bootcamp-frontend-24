@@ -3,9 +3,9 @@ import FlagContainer from "../atoms/FlagContainer"
 const FlagsBar = () => {
    return (
       <div>
-         <FlagContainer/>
-         <FlagContainer/>
-         <FlagContainer/>
+         <FlagContainer flagImage={"assets/flags/spain.svg"} />
+         <FlagContainer flagImage={"assets/flags/spain.svg"}/>
+         <FlagContainer flagImage={"assets/flags/spain.svg"}/>
       </div>
    )
 }

@@ -1,7 +1,13 @@
-const FlagContainer = () => {
+interface FlagContainer {
+   flagImage: string
+}
+
+const FlagContainer = ({flagImage}: FlagContainer) => {
 
    return (
-      <p>FLAG</p>
+      <div>
+         <img src={flagImage} alt="" width={200} />
+      </div>
    )
 }
 
