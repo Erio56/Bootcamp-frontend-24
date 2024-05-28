@@ -6,7 +6,7 @@ const FlagContainer = ({flagImage}: FlagContainer) => {
 
    return (
       <div>
-         <img src={flagImage} alt="" width={200} />
+         <img src={flagImage} alt="" width={150} />
       </div>
    )
 }
