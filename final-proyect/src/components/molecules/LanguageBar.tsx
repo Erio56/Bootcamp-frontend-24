@@ -1,18 +1,22 @@
-import { useContext } from "react";
+import { useState } from "react";
 import FlagContainer from "../atoms/FlagContainer";
-import { GeneralContext } from "../../contexts/GeneralContex";
-import useLanguages from "../../API/LanguageDetails";
+import LanguageSelector from "../atoms/LanguageSelector";
 
 const FlagsBar = () => {
-  const { currentLanguage, setCurrentLanguage } = useContext(GeneralContext);
+
+  const [selectedLanguages, setSelectedLanguages] = useState(['en','ja-Hrkt'])
+
+  const handleSelectLanguage = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setSelectedLanguages(selectedLanguages.concat(e.target.value))
+  }
 
   return (
     <div>
+      <LanguageSelector handleOnChange={handleSelectLanguage}/>
 
-
-      <FlagContainer flagImage={"assets/flags/spain.svg"} />
-      <FlagContainer flagImage={"assets/flags/spain.svg"} />
-      <FlagContainer flagImage={"assets/flags/spain.svg"} />
+      <div>
+        {selectedLanguages.map(selectedLanguage => <FlagContainer flagImage={"assets/flags/spain.svg"} languageName={selectedLanguage} key={selectedLanguage}/>)}
+      </div>
     </div>
   );
 };
