@@ -4,10 +4,12 @@ import LanguageSelector from "../atoms/LanguageSelector";
 
 const FlagsBar = () => {
 
-  const [selectedLanguages, setSelectedLanguages] = useState(['en','ja-Hrkt'])
+  const [selectedLanguages, setSelectedLanguages] = useState<string[]>(['en','ja-Hrkt'])
 
   const handleSelectLanguage = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    setSelectedLanguages(selectedLanguages.concat(e.target.value))
+    if(!selectedLanguages.find(l => l === e.target.value)){
+      setSelectedLanguages(selectedLanguages.concat(e.target.value))
+    }
   }
 
   return (

@@ -10,7 +10,7 @@ const FlagContainer = (props: FlagContainer) => {
    const { currentLanguage, setCurrentLanguage } = useContext(GeneralContext);
 
    const handleClick = (language: string) => {
-     setCurrentLanguage(language);
+      setCurrentLanguage(language);
    }  
 
 

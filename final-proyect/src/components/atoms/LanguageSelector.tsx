@@ -12,6 +12,7 @@ const LanguageSelector = (props: LanguageSelectorProps) => {
 
   return (
     <div>
+      <div>Current language {currentLanguage}</div>
       <label htmlFor="language">Choose a language:</label>
       <select name="language" id="language" onChange={(e) => props.handleOnChange(e)}>
         {languages.map((l) => (
