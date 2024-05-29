@@ -14,7 +14,7 @@ const FlagsBar = () => {
         {JSON.stringify(currentLanguage)}
         <label htmlFor="language">Choose a language:</label>
          <select name="language" id="language">
-            {languages.map(l =>  <option>{l.names.find( x => x.language.name === currentLanguage)?.name}</option>)}
+            {languages.map(l =>  <option>{l.names.find( x => x.language.name === currentLanguage)?.name || l.name}</option>)}
          </select>
 
       </div>
