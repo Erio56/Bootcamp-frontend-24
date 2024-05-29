@@ -1,11 +1,21 @@
+type PokemonImageProps = {
+  pokemonId: number | undefined;
+};
 
-const PokemonImage = () => {
-
-   return (
-      <div>
-         <img src="assets/placeholders/pikachu_shadow.png" alt="shadow" width={500} />
-      </div>
-   )
-}
+const PokemonImage = (props: PokemonImageProps) => {
+  return (
+    <div>
+      {props.pokemonId ? (
+        <img
+          src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${props.pokemonId}.png `}
+          alt="shadow"
+          width={500}
+        />
+      ) : (
+        <div>image not found</div>
+      )}
+    </div>
+  );
+};
 
 export default PokemonImage;
