@@ -1,4 +1,4 @@
-export interface ISpecie {
+export interface Specie {
    name: string,
    url: string
 }
