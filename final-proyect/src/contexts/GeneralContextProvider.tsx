@@ -1,16 +1,16 @@
-import { useState } from "react";
 import { GeneralContext } from "./GeneralContex";
+import useLanguages from "../API/Langage";
 
 type Props =  {
    children: React.ReactNode;
 }
- 
+
 const GeneralContextProvider = ({ children }: Props) => {
-  const [language, setLanguage] = useState("en");
+   const languages = useLanguages();
 
   return (
     <div>
-      <GeneralContext.Provider value={{ language, setLanguage }}> {children} </GeneralContext.Provider>
+      <GeneralContext.Provider value={{ languages }}> {children} </GeneralContext.Provider>
     </div>
   );
 }

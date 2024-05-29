@@ -1,3 +1,11 @@
 import { createContext } from 'react';
+import { Language } from '../API/models/LanguagesReturn';
 
-export const GeneralContext = createContext({});
+export interface GeneralContext {
+   languages: Language[]
+}
+
+
+export const GeneralContext = createContext<GeneralContext>({
+   languages: []
+});
