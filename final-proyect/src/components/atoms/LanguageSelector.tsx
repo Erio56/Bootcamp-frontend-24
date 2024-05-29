@@ -20,3 +20,5 @@ const LanguageSelector = () => {
     </div>
   );
 };
+
+export default LanguageSelector;
