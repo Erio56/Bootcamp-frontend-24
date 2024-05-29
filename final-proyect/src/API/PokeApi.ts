@@ -1,38 +1,39 @@
 import { useEffect, useState } from "react";
-import { SpecieResult } from "./models/SpecieReturn";
 import { Pokemon } from "./models/Pokemon";
 
+function getRandomNumber(): number {
+  return Math.floor(Math.random() * 898) + 1; // As of now, there are 898 Pokémon species.
+}
+
 const usePokemon = () => {
-  const [pokemon, setPokemon] = useState<Pokemon[]>([]);
+  const [pokemons, setPokemons] = useState<Pokemon[]>([]);
   const [error, setError] = useState<string | null>(null);
 
-  function getRandomNumber(): number {
-    return Math.floor(Math.random() * 200) + 1;
-  }
-	
-  const randomNumber = getRandomNumber();
-	
   useEffect(() => {
-    fetch(`https://pokeapi.co/api/v2/pokemon-species??offset=${randomNumber}&limit=20`)
-      .then((response) => response.json())
-      .then((data: SpecieResult) => {
-        const promises = data.results.map((pokemon) =>
-          fetch(pokemon.url).then((response) => response.json())
+    const fetchRandomPokemonSpecies = async () => {
+      try {
+        const randomNumbers = Array.from({ length: 4 }, () => getRandomNumber());
+        const promises = randomNumbers.map((number) =>
+          fetch(`https://pokeapi.co/api/v2/pokemon-species/${number}`).then((response) => response.json())
         );
-        return Promise.all(promises);
-      })
-      .then((pokemons: Pokemon[]) => {
-        const results = pokemons.map((pokemon) => ({
-					id: pokemon.id,
-          name: pokemon.name,
-          names: pokemon.names
+        const results = await Promise.all(promises);
+
+        const formattedResults = results.map((specie: Pokemon) => ({
+          id: specie.id,
+          name: specie.name,
+          names: specie.names
         }));
-        setPokemon(results);
-      })
-      .catch((err) => setError("Failed to fetch Pokémon data"));
+
+        setPokemons(formattedResults);
+      } catch (err) {
+        setError("Failed to fetch Pokémon data");
+      }
+    };
+
+    fetchRandomPokemonSpecies();
   }, []);
 
-  return { pokemon, error };
+  return { pokemons, error };
 };
 
 export default usePokemon;
