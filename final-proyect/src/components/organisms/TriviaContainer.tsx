@@ -35,9 +35,6 @@ const TriviaContainer = () => {
 
   return (
     <div>
-      <p>{JSON.stringify(triviaPokemon)}</p>
-      <p>Score: {score}</p>
-      <p>Tries: {tries}</p>
       {triviaPokemon && <PokemonImage pokemonId={triviaPokemon.id} />}
       {pokemons.map((pokemon) => (
         <TriviaButton 
