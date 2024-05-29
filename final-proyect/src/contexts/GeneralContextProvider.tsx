@@ -1,16 +1,17 @@
 import { GeneralContext } from "./GeneralContex";
-import useLanguages from "../API/Langage";
+import { useState } from "react";
+import { LanguageDetail } from "../API/models/LanguageDetailsReturn";
 
 type Props =  {
    children: React.ReactNode;
 }
 
 const GeneralContextProvider = ({ children }: Props) => {
-   const languages = useLanguages();
+   const [currentLanguage, setCurrentLanguage] = useState<LanguageDetail | null >(null)
 
   return (
     <div>
-      <GeneralContext.Provider value={{ languages }}> {children} </GeneralContext.Provider>
+      <GeneralContext.Provider value={{ currentLanguage, setCurrentLanguage }}> {children} </GeneralContext.Provider>
     </div>
   );
 }

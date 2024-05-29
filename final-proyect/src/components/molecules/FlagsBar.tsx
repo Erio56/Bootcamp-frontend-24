@@ -1,10 +1,12 @@
 import { useContext } from "react";
 import FlagContainer from "../atoms/FlagContainer"
 import { GeneralContext } from "../../contexts/GeneralContex";
+import useLanguages from "../../API/LanguageDetails";
 
 const FlagsBar = () => {
 
-   const languages = useContext(GeneralContext).languages;
+   
+   const {loading, languages} = useLanguages();
 
    return (
       <div>
@@ -12,7 +14,7 @@ const FlagsBar = () => {
             {JSON.stringify(languages)}
             <label htmlFor="language">Choose a language:</label>
             <select name="language" id="language">
-               { languages.map( (l) => (<option value={l.name}>{l.name}</option>)) }
+               { languages.map( (l) => (<option value={l.name}>{l.names[l.name]}</option>)) }
             </select>
          </div>
 
