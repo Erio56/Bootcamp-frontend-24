@@ -1,28 +1,29 @@
 import { useContext } from "react";
-import FlagContainer from "../atoms/FlagContainer"
+import FlagContainer from "../atoms/FlagContainer";
 import { GeneralContext } from "../../contexts/GeneralContex";
 import useLanguages from "../../API/LanguageDetails";
 
 const FlagsBar = () => {
+  const { currentLanguage, setCurrentLanguage } = useContext(GeneralContext);
 
-   
-   const {loading, languages} = useLanguages();
+  const { loading, languages } = useLanguages();
 
-   return (
+  return (
+    <div>
       <div>
-         <div>
-            {JSON.stringify(languages)}
-            <label htmlFor="language">Choose a language:</label>
-            <select name="language" id="language">
-               { languages.map( (l) => (<option value={l.name}>{l.names[l.name]}</option>)) }
-            </select>
-         </div>
+        {JSON.stringify(currentLanguage)}
+        <label htmlFor="language">Choose a language:</label>
+         <select name="language" id="language">
+            {languages.map(l =>  <option>{l.names.find( x => x.language.name === currentLanguage)?.name}</option>)}
+         </select>
 
-         <FlagContainer flagImage={"assets/flags/spain.svg"} />
-         <FlagContainer flagImage={"assets/flags/spain.svg"}/>
-         <FlagContainer flagImage={"assets/flags/spain.svg"}/>
       </div>
-   )
-}
+
+      <FlagContainer flagImage={"assets/flags/spain.svg"} />
+      <FlagContainer flagImage={"assets/flags/spain.svg"} />
+      <FlagContainer flagImage={"assets/flags/spain.svg"} />
+    </div>
+  );
+};
 
 export default FlagsBar;

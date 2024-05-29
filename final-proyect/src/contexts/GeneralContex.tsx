@@ -1,15 +1,11 @@
 import { createContext, Dispatch, SetStateAction } from 'react';
-import { LanguageDetail } from '../API/models/LanguageDetailsReturn';
 
 
-type SetStateType = Dispatch<SetStateAction<LanguageDetail | null>>;
+type SetStateType = Dispatch<SetStateAction<string>>;
 export interface GeneralContext {
-   currentLanguage: LanguageDetail | null;
-   setCurrentLanguage: null | SetStateType;
+   currentLanguage: string;
+   setCurrentLanguage: SetStateType | null;
 }
 
 
-export const GeneralContext = createContext<GeneralContext>({
-   currentLanguage: null,
-   setCurrentLanguage: null
-});
+export const GeneralContext = createContext<GeneralContext | null>(null);
