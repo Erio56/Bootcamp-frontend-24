@@ -1,4 +1,4 @@
-import FlagsBar from "../molecules/FlagsBar";
+import FlagsBar from "../molecules/LanguageBar";
 import Navbar from "../organisms/Navbar";
 import TriviaContainer from "../organisms/TriviaContainer";
 
