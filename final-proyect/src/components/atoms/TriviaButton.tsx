@@ -1,6 +1,11 @@
-const TriviaButton = () => {
+type TriviaButtonProps = {
+   buttonName: string,
+   handleOnClick: () => void
+}
+
+const TriviaButton = (props : TriviaButtonProps) => {
    return (
-      <button> Click me</button>
+      <button onClick={props.handleOnClick} type="button"> {props.buttonName} </button>
    )
 }
 
