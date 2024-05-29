@@ -7,8 +7,6 @@ import { GeneralContext } from "../../contexts/GeneralContex";
 
 const TriviaContainer = () => {
   
-  const { currentLanguage, setCurrentLanguage } = useContext(GeneralContext);
-
   const [triviaPokemon, setTriviaPokemon] = useState<Pokemon | null>(null);
   const [score, setScore] = useState(0);
   const [tries, setTries] = useState(0);
