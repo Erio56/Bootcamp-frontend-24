@@ -1,11 +1,14 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import usePokemon from "../../API/PokeApi";
 import PokemonImage from "../atoms/PokemonImage";
 import TriviaButton from "../atoms/TriviaButton";
 import { Pokemon } from "../../API/models/Pokemon";
+import { GeneralContext } from "../../contexts/GeneralContex";
 
 const TriviaContainer = () => {
   
+  const { currentLanguage, setCurrentLanguage } = useContext(GeneralContext);
+
   const [triviaPokemon, setTriviaPokemon] = useState<Pokemon | null>(null);
   const [score, setScore] = useState(0);
   const [tries, setTries] = useState(0);
@@ -36,7 +39,7 @@ const TriviaContainer = () => {
       {pokemons.map((pokemon) => (
         <TriviaButton 
           key={pokemon.id} 
-          buttonName={pokemon.name} 
+          pokemon={pokemon} 
           handleOnClick={() => handleClick(pokemon.id)} 
         />
       ))}
