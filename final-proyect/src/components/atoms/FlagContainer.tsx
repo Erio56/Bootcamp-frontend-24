@@ -28,7 +28,6 @@ const FlagContainer = (props: FlagContainer) => {
           currentTarget.src = "assets/flags/unknown.png";
         }}
       />
-      <p>{props.languageName}</p>
     </div>
   );
 };
