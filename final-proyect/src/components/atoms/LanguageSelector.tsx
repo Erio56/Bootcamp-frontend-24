@@ -7,8 +7,8 @@ type LanguageSelectorProps = {
 }
 
 const LanguageSelector = (props: LanguageSelectorProps) => {
-  const { currentLanguage, setCurrentLanguage } = useContext(GeneralContext);
-  const { loading, languages } = useLanguages();
+  const { currentLanguage } = useContext(GeneralContext);
+  const { languages } = useLanguages();
 
   return (
     <div>

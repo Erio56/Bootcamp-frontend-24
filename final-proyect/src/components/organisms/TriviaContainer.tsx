@@ -3,6 +3,7 @@ import usePokemon from "../../API/PokeApi";
 import PokemonImage from "../atoms/PokemonImage";
 import TriviaButton from "../atoms/TriviaButton";
 import { Pokemon } from "../../API/models/Pokemon";
+import GameOverPopUp from "../molecules/GameOverPopUp";
 
 const TriviaContainer = () => {
   const [triviaPokemon, setTriviaPokemon] = useState<Pokemon | null>(null);
@@ -33,7 +34,7 @@ const TriviaContainer = () => {
 
   return (
     <div>
-      {tries === 3 && <div>Game over your score is {score}</div>}
+      {tries === 3 && <GameOverPopUp score={score}/>}
       {tries < 3 && (
         <div>
           {triviaPokemon && <PokemonImage pokemonId={triviaPokemon.id} />}
