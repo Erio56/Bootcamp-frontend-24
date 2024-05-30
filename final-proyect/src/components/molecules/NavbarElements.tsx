@@ -4,9 +4,9 @@ const NavbarElements = () => {
 
    return (
       <menu className="navbar_items">
-         <NavbarItem label={"Game"}/>
-         <NavbarItem label={"Langs"}/>
-         <NavbarItem label={"Pokédex"}/>
+         <NavbarItem label={"Game"} path={"/"} isClickable={true}/>
+         <NavbarItem label={"Langs"} path={"languages"} isClickable={true}/>
+         <NavbarItem label={"Pokédex"} path={"pokedex"} isClickable={true}/>
       </menu>
    )
 }
