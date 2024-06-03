@@ -5,7 +5,7 @@ function getRandomNumber(): number {
   return Math.floor(Math.random() * 898) + 1; // As of now, there are 898 Pokémon species.
 }
 
-const usePokemon = (trigger: number) => { // Accept a trigger to refetch
+const usePokemon = (trigger: number) => {
   const [pokemons, setPokemons] = useState<Pokemon[]>([]);
   const [error, setError] = useState<string | null>(null);
 
