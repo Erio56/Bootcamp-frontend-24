@@ -1,4 +1,3 @@
-// src/hooks/usePokemon.ts
 import { useState, useEffect } from 'react';
 
 interface Pokemon {
@@ -15,6 +14,8 @@ interface PokemonDetail {
 }
 
 export const usePokedex = (limit: number, initialOffset: number) => {
+  console.log("i'm running")
+
   const [pokemons, setPokemons] = useState<PokemonDetail[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);

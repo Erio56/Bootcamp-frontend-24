@@ -1,6 +1,18 @@
+
+import PokedexList from "../organisms/PokedexList";
+
+
 const PokedexPage = () => {
+
+   
+
    return ( 
-      <p>pokedex</p>
+      <div>
+         <div>
+            <PokedexList limit={150} offset={0}/>
+         </div>
+         <p>pokedex</p>
+      </div>
    )
 }
 
