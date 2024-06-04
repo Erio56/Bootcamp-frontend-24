@@ -1,13 +1,25 @@
-import _ from 'lodash';
+function getComponent() {
+  return import("lodash")
+    .then(({ default: _ }) => {
+      const element = document.createElement("div");
+      element.innerHTML = _.join(["Hello", "webpack"], " ");
 
-function component() {
-   const element = document.createElement('div');
-   
-   // Lodash, now imported by this script
-   element. innerHTML = _. join(['Hello', 'webpack'], ' ');
-   
-   return element;
-   
+      import(/* webpackChunkName: "testModule" */ "./example.js")
+        .then((testModule) => {
+          const moduleElement = testModule.default();
+          document.body.appendChild(moduleElement);
+        })
+        .catch((error) => {
+          console.error("Failed to load module", error);
+        });
+
+      return element;
+    })
+    .catch((error) => {
+      console.error("An error occurred while loading the component", error);
+    });
 }
-   
-document.body.appendChild (component());
+
+getComponent().then((component) => {
+  document.body.appendChild(component);
+});

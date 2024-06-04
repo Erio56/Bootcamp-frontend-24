@@ -3,10 +3,12 @@ const path = require('path');
 
 module.exports = {
    mode: 'development',
-   entry: './src/index.js',
+   entry: {
+     index: './src/index.js',
+   },
    output: {
+      filename: '[name].bundle.js',
       path: path.resolve(__dirname, 'dist'),
-      filename: 'main.js',
    },
    devtool: 'inline-source-map',
    devServer: {
@@ -15,4 +17,9 @@ module.exports = {
    plugins: [
       new HtmlWebpackPlugin({ title: 'Development' }),
    ],
+   optimization: {
+      splitChunks: {
+        chunks: 'all',
+      },
+   },
 };

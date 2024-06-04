@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebpack_demo=self.webpackChunkwebpack_demo||[]).push([[7],{222:(e,n,t)=>{t.r(n),t.d(n,{default:()=>r});var c=t(543),o=t.n(c);function r(){const e=document.createElement("div");return e.innerHTML=o().join(["Hello","From","Code","splitting"]," "),e}}}]);
