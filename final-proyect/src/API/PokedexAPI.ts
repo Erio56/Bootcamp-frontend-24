@@ -44,7 +44,8 @@ export const usePokedex = (limit: number, initialOffset: number) => {
     try {
       const newPokemons = await getPokemons(limit, currentOffset);
       const detailedPokemons = await Promise.all(newPokemons.map(pokemon => getPokemonDetail(pokemon.url)));
-      setPokemons(prevPokemons => [...prevPokemons, ...detailedPokemons]);
+      setPokemons([...pokemons, ...detailedPokemons]);
+      console.log("set pokemons")
       setCurrentOffset(prevOffset => prevOffset + limit);
     } catch (err) {
       setError('Failed to fetch Pokémons');
@@ -54,6 +55,11 @@ export const usePokedex = (limit: number, initialOffset: number) => {
 
   useEffect(() => {
     loadMorePokemons();
+
+    return () => {
+      console.log("unset pokemons")
+      setPokemons([])
+    }
   }, []);
 
   return { pokemons, loading, error, loadMorePokemons };
